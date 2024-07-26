@@ -1,3 +1,4 @@
+// breakPoint
 const sm = 600
 const md = 960
 const lg = 1280
@@ -8,12 +9,14 @@ export const breakPoint = {
   lg,
 }
 
+// z-index
 const toast = 1400
 
 export const zIndex = {
   toast,
 }
 
+// color
 const headerBgColor = '#b7b4b4'
 
 const alertInfoBgColor = '#e5f6fd'

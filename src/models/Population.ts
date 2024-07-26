@@ -28,7 +28,9 @@ const isPopulationCategory = (arg: unknown): arg is PopulationCategory => {
   return typeof pc.label === 'string' && pc.data.every((p) => isPopulation(p))
 }
 
-const isPopulationCategoies = (args: unknown): args is PopulationCategories => {
+const isPopulationCategories = (
+  args: unknown
+): args is PopulationCategories => {
   const pcs = args as PopulationCategories
 
   return (
@@ -38,4 +40,4 @@ const isPopulationCategoies = (args: unknown): args is PopulationCategories => {
   )
 }
 
-export { isPopulation, isPopulationCategory, isPopulationCategoies }
+export { isPopulation, isPopulationCategory, isPopulationCategories }

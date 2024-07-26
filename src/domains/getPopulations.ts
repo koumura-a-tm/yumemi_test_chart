@@ -1,7 +1,10 @@
 import ky, { Options } from 'ky'
 
 import { DEFAULT_API_OPTIONS } from '@config/ky'
-import { PopulationCategories, isPopulationCategoies } from '@models/Population'
+import {
+  PopulationCategories,
+  isPopulationCategories,
+} from '@models/Population'
 
 type QueryParam = {
   prefCode: number
@@ -19,7 +22,7 @@ const getPopulations = async (
   const response = await ky.get('population/composition/perYear', mergedOptions)
   const populations = (await response.json()) as unknown[]
 
-  if (!isPopulationCategoies(populations)) {
+  if (!isPopulationCategories(populations)) {
     throw Error('API type error')
   }
 

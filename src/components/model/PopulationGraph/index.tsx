@@ -3,13 +3,12 @@ import HighchartsMore from 'highcharts/highcharts-more'
 import HighchartsExporting from 'highcharts/modules/exporting'
 import NoDataToDisplay from 'highcharts/modules/no-data-to-display'
 import HighchartsReact from 'highcharts-react-official'
-import { FC } from 'react'
 
 type Props = {
   data: SeriesOptionsType[]
 }
 
-export const PopulationGraph: FC<Props> = ({ data }) => {
+export const PopulationGraph = ({ data }: Props) => {
   if (typeof Highcharts === 'object') {
     HighchartsExporting(Highcharts)
     NoDataToDisplay(Highcharts)

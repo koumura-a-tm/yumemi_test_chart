@@ -1,10 +1,10 @@
 import axios from 'axios'
-import { FC, useEffect, useState } from 'react'
+import { CSSProperties, useEffect, useState } from 'react'
 
-import { CheckField } from './CheckField'
-import { Graph } from './Graph'
+import { CheckField } from '../CheckField'
+import { Graph } from '../Graph'
 
-export const Main: FC = () => {
+export const Main = () => {
   const [prefectures, setPreFectures] = useState<{
     message: null
     result: {
@@ -16,7 +16,7 @@ export const Main: FC = () => {
     { prefName: string; data: { year: number; value: number }[] }[]
   >([])
 
-  // 都道府県一覧を取得する
+  // 都道府県一覧 を取得する
   useEffect(() => {
     axios
       .get('https://opendata.resas-portal.go.jp/api/v1/prefectures', {
@@ -30,7 +30,7 @@ export const Main: FC = () => {
       })
   }, [])
 
-  // チェックボックスをクリックした際の処理
+  // チェックボックス をクリックした際の処理
   const handleClickCheck = (
     prefName: string,
     prefCode: number,
@@ -38,7 +38,7 @@ export const Main: FC = () => {
   ) => {
     const c_prefPopulation = prefPopulation.slice()
 
-    // チェックをつけた処理
+    // チェック をつけた際の 処理
     if (check) {
       if (
         c_prefPopulation.findIndex((value) => value.prefName === prefName) !==
@@ -66,7 +66,7 @@ export const Main: FC = () => {
           return
         })
     }
-    // チェックを外した処理
+    // チェック を外した際の 処理
     else {
       const deleteIndex = c_prefPopulation.findIndex(
         (value) => value.prefName === prefName
@@ -93,10 +93,7 @@ export const Main: FC = () => {
   )
 }
 
-const Styles: { [key: string]: React.CSSProperties } = {
-  graph: {
-    padding: '10px',
-  },
+const Styles: { [key: string]: CSSProperties } = {
   label: {
     fontSize: '20px',
     padding: '0.5rem 2rem',

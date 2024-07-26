@@ -1,6 +1,6 @@
 import Head from 'next/head'
 
-import { HomePage } from '@components/page/HomePage'
+import { TopPage } from '@components/page/TopPage'
 
 const Home = () => (
   <div>
@@ -14,7 +14,7 @@ const Home = () => (
       <link rel="icon" href="/favicon.ico" />
     </Head>
 
-    <HomePage />
+    <TopPage />
   </div>
 )
 

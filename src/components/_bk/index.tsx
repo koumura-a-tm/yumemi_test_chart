@@ -1,30 +1,27 @@
 import { Inter } from '@next/font/google'
 import Image from 'next/image'
-import { FC } from 'react'
 
-import styles from '@styles/Home.module.scss'
+import styles from '@styles/bk/Top.module.scss'
 
 const inter = Inter({ subsets: ['latin'] })
 
-export const Sample: FC = () => (
+export const Sample = () => (
   <>
     <div className={styles.description}>
-      <div>
-        <a
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            src="/vercel.svg"
-            alt="Vercel Logo"
-            className={styles.vercelLogo}
-            width={100}
-            height={24}
-            priority
-          />
-        </a>
-      </div>
+      <a
+        href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <Image
+          src="/vercel.svg"
+          alt="Vercel Logo"
+          className={styles.vercelLogo}
+          width={100}
+          height={24}
+          priority
+        />
+      </a>
     </div>
 
     <div className={styles.center}>

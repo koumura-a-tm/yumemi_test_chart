@@ -1,6 +1,5 @@
 import Highcharts from 'highcharts'
 import HighchartsReact from 'highcharts-react-official'
-import { FC } from 'react'
 
 type Props = {
   populationdata: {
@@ -9,8 +8,8 @@ type Props = {
   }[]
 }
 
-// 選んだ都道府県の人口推移グラフを表示するコンポーネント
-export const Graph: FC<Props> = ({ populationdata }) => {
+// 選んだ都道府県 の 人口推移グラフ を表示するコンポーネント
+export const Graph = ({ populationdata }: Props) => {
   const series: Highcharts.SeriesOptionsType[] = []
   const categories = []
 
@@ -45,7 +44,7 @@ export const Graph: FC<Props> = ({ populationdata }) => {
       },
     },
 
-    // 都道府県を一つも選んでいない場合 との分岐条件
+    // 都道府県を一つも選んでいない場合 との 分岐条件
     series:
       series.length === 0
         ? [{ type: 'line', name: '都道府県名', data: [] }]
