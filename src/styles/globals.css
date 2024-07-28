@@ -1,0 +1,51 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply container mx-auto max-w-[1200px] min-h-screen p-5 bg-[#F5F5F5] text-[#505050];
+  }
+
+  button {
+    @apply rounded-xl px-2 py-2 border border-[#505050] font-bold;
+  }
+
+  select {
+    @apply rounded-xl px-5 py-2 border border-[#505050] font-bold;
+  }
+}
+
+@layer components {
+  .top {
+    @apply flex flex-col gap-3;
+  }
+
+  .accordion {
+    @apply flex flex-col;
+  }
+
+  .accordion-trigger {
+    @apply border-none py-0 px-2 text-2xl font-bold;
+  }
+
+  .separator {
+    @apply my-2 border border-[#505050];
+  }
+
+  .toggle-button-list {
+    @apply grid grid-cols-4 gap-1 sm:grid-cols-6 lg:grid-cols-8;
+  }
+
+  .accordion-trigger-contents {
+    @apply flex justify-between items-center;
+  }
+
+  .chart {
+    @apply text-right;
+  }
+
+  .select-filter-option {
+    @apply mb-1;
+  }
+}
